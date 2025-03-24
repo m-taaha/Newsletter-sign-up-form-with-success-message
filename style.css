@@ -63,7 +63,7 @@ p {
 }
 
 .liste-items li::before {
-  content: url(./assets/images/icon-list.svg);
+  content: url(./icon-list.svg);
 }
 
 #form {
@@ -123,6 +123,32 @@ button:focus-visible::after {
   opacity: 0.25;
 }
 
+/* Style the container for label and error message */
+.above-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Style the error message */
+#email-error {
+  color: hsl(4, 100%, 67%);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Style for invalid input */
+input:invalid:not(:focus) {
+  border: 1px solid hsl(4, 100%, 67%);
+  background-color: hsla(4, 100%, 67%, 0.1);
+  color: hsl(4, 100%, 67%);
+}
+
+.hidden {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   body {
     font-family: "Roboto", sans-serif;
@@ -202,27 +228,6 @@ button:focus-visible::after {
 
   .buttn {
     width: 370px;
-  }
-
-  #email-error {
-    display: none;
-    color: hsl(4, 100%, 67%);
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-top: -0.5rem;
-    margin-bottom: 0.5rem;
-    text-align: right;
-    float: right;
-  }
-
-  #email-error.visible {
-    display: block;
-  }
-
-  input.error {
-    border: 1px solid hsl(4, 100%, 67%);
-    background-color: hsla(4, 100%, 67%, 0.1);
-    color: hsl(4, 100%, 67%);
   }
 
   #form {

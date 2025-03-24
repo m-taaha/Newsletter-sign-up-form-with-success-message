@@ -4,13 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const subscribe_btn = document.getElementById("subscribe-btn");
 
   subscribe_btn.addEventListener("click", (e) => {
-    e.preverntDefault(); //to prevent form submision
+    e.preventDefault(); //to prevent form submision
     const entered_email = email_input.value.trim();
     console.log(entered_email);
 
     // validate email
     if (!validEmail(entered_email)) {
       error();
+    } else {
+      error_message.classList.add("hidden");
+      email_input.classList.remove("error");
     }
   });
 
@@ -22,6 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function error() {
     //show error message
     error_message.classList.remove("hidden");
-    // email_input.classList.add("hidden");
+    email_input.classList.add("error");
   }
 });
