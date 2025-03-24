@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <img
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt="image-mobile"
+        />
+      </div>
+      <div class="content">
+        <h1 class="heading">Stay updated!</h1>
+        <p class="paragraph">
+          Join 60,0000+ product managers reciving monthly updates on:
+        </p>
+        <ul role="list" class="liste-items">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure upates are a success</li>
+          <li>And much more!</li>
+        </ul>
+
+        <form id="form" novalidate>
+          <div class="above-part">
+            <label for="email">Email Address</label>
+            <span aria-live="polite" id="email-error" class="hidden"
+              >Valid email required</span
+            >
+          </div>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="email@company.com"
+          />
+          <button class="buttn" type="submit">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
